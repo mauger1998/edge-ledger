@@ -1,3 +1,6 @@
+const readMoreButton = document.getElementById("readMore");
+const scrollTo = document.querySelector("#scrollToHere")
+
 function initMap() {
     const loc = { lat:13.082680, lng:80.270721};
     const map = new google.maps.Map(document.querySelector('.map')
@@ -32,3 +35,9 @@ $('#navbar a, .btn').on('clickk', function(event){
         );
     }
 });
+
+readMoreButton.addEventListener("click", (e) => {
+    scrollTo.scrollIntoView({
+        behaviour: "smooth"
+    })
+})
