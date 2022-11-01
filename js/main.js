@@ -1,5 +1,8 @@
 const readMoreButton = document.getElementById("readMore");
-const scrollTo = document.querySelector("#scrollToHere")
+const scrollTo = document.querySelector("#scrollToHere");
+const secondWhat = document.getElementById("secondWhat");
+const homeButton = document.getElementById("homeButton");
+const scrollToHome = document.querySelector(".home")
 
 function initMap() {
     const loc = { lat:13.082680, lng:80.270721};
@@ -38,6 +41,16 @@ $('#navbar a, .btn').on('clickk', function(event){
 
 readMoreButton.addEventListener("click", (e) => {
     scrollTo.scrollIntoView({
+        behaviour: "smooth"
+    })
+})
+secondWhat.addEventListener("click", (e) => {
+    scrollTo.scrollIntoView({
+        behaviour: "smooth"
+    })
+})
+homeButton.addEventListener("click", (e) => {
+    scrollToHome.scrollIntoView({
         behaviour: "smooth"
     })
 })
